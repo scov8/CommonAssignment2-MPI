@@ -4,26 +4,26 @@
 # Lecturer: Francesco Moscato	fmoscato@unisa.it
 #
 # Group:
-# Rosa Gerardo	    0622701829	 g.rosa10@studenti.unisa.it
+# Rosa Gerardo	    0622701829	g.rosa10@studenti.unisa.it
 # Scovotto Luigi    0622701702  l.scovotto1@studenti.unisa.it
 # Tortora Francesco 0622701700  f.tortora21@studenti.unisa.it
 #
-# Copyright (C) 2021 - All Rights Reserved
-# This file is part of CommonAssignment1.
+# Copyright (C) 2022 - All Rights Reserved
+# This file is part of CommonAssignment2.
 #
 # Requirements: Parallelize and Evaluate Performances of "COUNTING SORT" Algorithm ,by using MPI.
 #
 # The previous year's group 02 files proposed by the professor during the course were used for file generation and extraction.
 #
-# The counting sort function for test case n. 1 was taken here:
-# https://github.com/ianliu/programacao-paralela/blob/master/omp-count-sort/main.c
+# The starting point for the counting sort function was from this video:
+# https://www.youtube.com/watch?v=qcOoEjdYSz0
 #
-# CommonAssignment1 is free software: you can redistribute it and/or modify
+# CommonAssignment2 is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# CommonAssignment1 is distributed in the hope that it will be useful,
+# CommonAssignment2 is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
@@ -46,14 +46,13 @@ from prettytable import MARKDOWN
 from prettytable import MSWORD_FRIENDLY
 import re
 
-#processes,read,dotprod,write,elapsed
 config = {
-			'seqKey': "NP-01",										#serve per scegliere quale riferimento prendere per il plot
+			'seqKey': "NP-01",													#is used to choose which reference to take for the plot
 			'filenameRegex': "SIZE-[0-9]+-NP-[0-9]{2}-O[0-6]-?[0-9]*",
 			'folderRegex':"SIZE-[0-9]+-O[0-9]",
 			"cols":{'generateArray_time':{'jpg':False,'computeSpeedup':False,},
-					'countingSort_time':{'jpg':False,'computeSpeedup':False,},
-					'elapsed':{'jpg':False,'computeSpeedup':True,}
+					'countingSort_time':{'jpg':False,'computeSpeedup':False,}, 	#if the 'computeSpeedup' is set to true I make the graphs referring to this
+					'elapsed':{'jpg':False,'computeSpeedup':True,} 				#we have decided to take as a reference the elapsed
 					},
 			"table":{
 				"header": ['Version','Processes','GenerateArray','CountingSort','Elapsed','Speedup','Efficiency'],
@@ -88,10 +87,6 @@ def _extract(path_to_folder,plot_columns):
 		ds = pd.read_csv(filename)
 		for col in plot_columns.keys():
 			print('Processing : ' + filename + ", Col : " + col)
-			#if 'skipForFile' in plot_columns[col] and re.match(plot_columns[col]['skipForFile'], filename):
-			#	print('SKIPPED : ' + filename + ", Col : " + col)
-			#	file_mean[col] = 0
-			#	continue
 			#extract the selected column
 			x_data = ds[col]
 			#compute gaussian mean
@@ -155,7 +150,7 @@ def _plot_from_table(header,rows,save=True,name="",show_plot=False):
 	except Exception as e:
 		print("config table or plot error")
 
-	for row in rows[0:]: #partiamo dalla riga 0
+	for row in rows[0:]: #to start from the row 0
 		x.append(row[thread_pos])
 		y.append(row[speedup_pos])
 
@@ -195,7 +190,7 @@ def extraction(root=os.path.join(os.path.dirname(os.path.realpath(__file__)),"me
 			cell = []
 			splitted_filename = filename_key.split("-")
 			if config["seqKey"] in filename_key:
-				seq = means[filename_key]['elapsed']
+				seq = means[filename_key]['elapsed'] #we must specify who we are plotting
 				print("la media:      ",seq)
 				nt = 1
 				cell.append('Parallel')

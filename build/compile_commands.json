@@ -1,0 +1,87 @@
+[
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/countingSort_test.dir/test/test.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/test/test.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/test/test.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/countingSort_test.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O0.dir/src/main_seq.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O0.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O2.dir/src/main_seq.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O2.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -O2 -fgnu89-inline -o CMakeFiles/program_O2.dir/src/main.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -O2 -fgnu89-inline -o CMakeFiles/program_O2.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O1.dir/src/main_seq.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O1.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O3.dir/src/main_seq.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main_seq.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/program_seq_O3.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -O3 -fgnu89-inline -o CMakeFiles/program_O3.dir/src/main.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -O3 -fgnu89-inline -o CMakeFiles/program_O3.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -O1 -fgnu89-inline -o CMakeFiles/program_O1.dir/src/main.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/main.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -O1 -fgnu89-inline -o CMakeFiles/program_O1.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+},
+{
+  "directory": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -I/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/include -isystem /opt/homebrew/Cellar/mpich/3.4.2/include  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -fgnu89-inline -o CMakeFiles/lib.dir/src/utils.c.o -c /Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c",
+  "file": "/Users/luigiscovotto/Desktop/CommonAssignment2-Team02/src/utils.c"
+}
+]
