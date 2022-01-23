@@ -35,11 +35,12 @@
 # https://github.com/scov8/CommonAssignment2-Team02
 
 TIME_STAMP=$(date +%s)
-NMEASURES=50
+NMEASURES=1
 
 ARRAY_RC=(50000000 100000000 150000000 200000000)
 ARRAY_THS=(0 1 2 4 8 16)
 ARRAY_OPT=(0 1 2 3)
+VERSION=(1 2)
 
 trap "exit" INT
 
@@ -49,38 +50,40 @@ SCRIPTPATH=$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )
 for size in "${ARRAY_RC[@]}"; do
 	for ths in "${ARRAY_THS[@]}"; do
 		for opt in "${ARRAY_OPT[@]}"; do
-			ths_str=$(printf "%02d" $ths)
+			for ver in "${VERSION[@]}"; do
+				ths_str=$(printf "%02d" $ths)
 
-			OUT_FILE=$SCRIPTPATH/measure/SIZE-$size-O$opt/SIZE-$size-NP-$ths_str-O$opt.csv
+				OUT_FILE=$SCRIPTPATH/measure/SIZE-$size-O$opt-V$ver/SIZE-$size-NP-$ths_str-O$opt-V$ver.csv
 
-			if [[ $opt -eq 0 && $ths -ne 0 ]]; then
-				continue;
-			fi
-
-			#to jump the measures for the MPI with 0 process (to jump the serial run)
-			if [[ $ths -eq 0 ]]; then
-				continue;
-			fi
-
-			mkdir -p $(dirname $OUT_FILE) 2> /dev/null
-
-			echo $(basename $OUT_FILE)
-
-			echo "DimArray,processes,generateArray_time,countingSort_time,elapsed" > "$OUT_FILE"
-
-			for ((i = 0 ; i < $NMEASURES ; i++)); do
-				if [[ $ths -eq 0 ]]; then
-					$1/program_seq_O$opt $size >> "$OUT_FILE"
-					printf "\r> %d/%d %3.1d%% " $(expr $i + 1) $NMEASURES $(expr \( \( $i + 1 \) \* 100 \) / $NMEASURES)
-					printf "#%.0s" $(seq -s " " 1 $(expr \( $i \* 40 \) / $NMEASURES))
+				if [[ $opt -eq 0 && $ths -ne 0 ]]; then
 					continue;
-				else
-					mpirun -np $ths $1/program_O$opt $size >> "$OUT_FILE"
-					printf "\r> %d/%d %3.1d%% " $(expr $i + 1) $NMEASURES $(expr \( \( $i + 1 \) \* 100 \) / $NMEASURES)
-					printf "#%.0s" $(seq -s " " 1 $(expr \( $i \* 40 \) / $NMEASURES))
 				fi
+
+				#to jump the measures for the MPI with 0 process (to jump the serial run)
+				if [[ $ths -eq 0 ]]; then
+					continue;
+				fi
+
+				mkdir -p $(dirname $OUT_FILE) 2> /dev/null
+
+				echo $(basename $OUT_FILE)
+
+				echo "DimArray,processes,generateArray_time,countingSort_time,elapsed" > "$OUT_FILE"
+
+				for ((i = 0 ; i < $NMEASURES ; i++)); do
+					if [[ $ths -eq 0 ]]; then
+						$1/program_seq_O$opt $size >> "$OUT_FILE"
+						printf "\r> %d/%d %3.1d%% " $(expr $i + 1) $NMEASURES $(expr \( \( $i + 1 \) \* 100 \) / $NMEASURES)
+						printf "#%.0s" $(seq -s " " 1 $(expr \( $i \* 40 \) / $NMEASURES))
+						continue;
+					else
+						mpirun -np $ths $1/program_O$opt-V$ver  $size >> "$OUT_FILE"
+						printf "\r> %d/%d %3.1d%% " $(expr $i + 1) $NMEASURES $(expr \( \( $i + 1 \) \* 100 \) / $NMEASURES)
+						printf "#%.0s" $(seq -s " " 1 $(expr \( $i \* 40 \) / $NMEASURES))
+					fi
+				done
+				printf "\n"
 			done
-			printf "\n"
 		done
 	done
 done

@@ -49,18 +49,24 @@ set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -DDEBUG")
 
 enable_testing()
 
-add_executable(program_O1 src/main.c src/utils.c include/utils.h)
-add_executable(program_O2 src/main.c src/utils.c include/utils.h)
-add_executable(program_O3 src/main.c src/utils.c include/utils.h)
+add_executable(program_O1-V1 src/mainV1.c src/utils.c include/utils.h)
+add_executable(program_O2-V1 src/mainV1.c src/utils.c include/utils.h)
+add_executable(program_O3-V1 src/mainV1.c src/utils.c include/utils.h)
+add_executable(program_O1-V2 src/mainV2.c src/utils.c include/utils.h)
+add_executable(program_O2-V2 src/mainV2.c src/utils.c include/utils.h)
+add_executable(program_O3-V2 src/mainV2.c src/utils.c include/utils.h)
 add_executable(program_seq_O0 src/main_seq.c src/utils.c include/utils.h)
 add_executable(program_seq_O1 src/main_seq.c src/utils.c include/utils.h)
 add_executable(program_seq_O2 src/main_seq.c src/utils.c include/utils.h)
 add_executable(program_seq_O3 src/main_seq.c src/utils.c include/utils.h)
 add_library(lib src/utils.c include/utils.h)
 
-target_include_directories(program_O1 PRIVATE include)
-target_include_directories(program_O2 PRIVATE include)
-target_include_directories(program_O3 PRIVATE include)
+target_include_directories(program_O1-V1 PRIVATE include)
+target_include_directories(program_O2-V1 PRIVATE include)
+target_include_directories(program_O3-V1 PRIVATE include)
+target_include_directories(program_O1-V2 PRIVATE include)
+target_include_directories(program_O2-V2 PRIVATE include)
+target_include_directories(program_O3-V2 PRIVATE include)
 target_include_directories(program_seq_O0 PRIVATE include)
 target_include_directories(program_seq_O1 PRIVATE include)
 target_include_directories(program_seq_O2 PRIVATE include)
@@ -71,19 +77,28 @@ target_include_directories(lib PRIVATE include)
 find_package(MPI REQUIRED)
 if(MPI_C_FOUND)
 	message(STATUS "Run: ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${MPIEXEC_PREFLAGS} EXECUTABLE ${MPIEXEC_POSTFLAGS} ARGS")
-	target_link_libraries(program_O1 PUBLIC MPI::MPI_C)
-	target_link_libraries(program_O2 PUBLIC MPI::MPI_C)
-	target_link_libraries(program_O3 PUBLIC MPI::MPI_C)
+	target_link_libraries(program_O1-V1 PUBLIC MPI::MPI_C)
+	target_link_libraries(program_O2-V1 PUBLIC MPI::MPI_C)
+	target_link_libraries(program_O3-V1 PUBLIC MPI::MPI_C)
+	target_link_libraries(program_O1-V2 PUBLIC MPI::MPI_C)
+	target_link_libraries(program_O2-V2 PUBLIC MPI::MPI_C)
+	target_link_libraries(program_O3-V2 PUBLIC MPI::MPI_C)
 	target_link_libraries(lib PUBLIC MPI::MPI_C)
 endif()
 
-target_compile_options(program_O1 PRIVATE -O1)
-target_compile_options(program_O2 PRIVATE -O2)
-target_compile_options(program_O3 PRIVATE -O3)
+target_compile_options(program_O1-V1 PRIVATE -O1)
+target_compile_options(program_O2-V1 PRIVATE -O2)
+target_compile_options(program_O3-V1 PRIVATE -O3)
+target_compile_options(program_O1-V2 PRIVATE -O1)
+target_compile_options(program_O2-V2 PRIVATE -O2)
+target_compile_options(program_O3-V2 PRIVATE -O3)
 
-target_compile_features(program_O1 PRIVATE c_std_11)
-target_compile_features(program_O2 PRIVATE c_std_11)
-target_compile_features(program_O3 PRIVATE c_std_11)
+target_compile_features(program_O1-V1 PRIVATE c_std_11)
+target_compile_features(program_O2-V1 PRIVATE c_std_11)
+target_compile_features(program_O3-V1 PRIVATE c_std_11)
+target_compile_features(program_O1-V2 PRIVATE c_std_11)
+target_compile_features(program_O2-V2 PRIVATE c_std_11)
+target_compile_features(program_O3-V2 PRIVATE c_std_11)
 target_compile_features(program_seq_O0 PRIVATE c_std_11)
 target_compile_features(program_seq_O1 PRIVATE c_std_11)
 target_compile_features(program_seq_O2 PRIVATE c_std_11)
@@ -122,9 +137,12 @@ add_custom_target(
 	 COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash ${CMAKE_CURRENT_BINARY_DIR}
     COMMENT "Generating measures [${CMAKE_CURRENT_SOURCE_DIR}/measures/measures.bash ${CMAKE_CURRENT_BINARY_DIR}]"
     DEPENDS
-		program_O1
-		program_O2
-		program_O3
+		program_O1-V1
+		program_O2-V1
+		program_O3-V1
+		program_O1-V2
+		program_O2-V2
+		program_O3-V2
 		program_seq_O0
 		program_seq_O1
 		program_seq_O2
