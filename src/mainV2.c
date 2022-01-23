@@ -167,7 +167,7 @@ int main(int argc, char **argv)
         for (int i = 1; i < world_size; i++)
             MPI_Send(&arr[(i)*size], size, MPI_INT, i, 1, MPI_COMM_WORLD);
 
-        for (int i = 0; i < size; i++) // prima era ++i
+        for (int i = 0; i < size; i++)
             count[arr[i]]++;
 
         //receives calculation results from processes and adds them into one.
