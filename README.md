@@ -21,4 +21,4 @@
 3. To generate measures (TAKE A LOT OF TIME! Our measures are already included so you should skip this step) run `make generate_measures`
 4. To extract mean times and speedup curves from them run `make extract_measures`
 
-Results can be found in the `measures/measure` directory, divided by problem size and the gcc optimization option used.
+Results of measures can be found in the measures/measure directory divided by problem size, the gcc optimization option used and case study (V1 for case study 1 and V2 for case study 2).
