@@ -105,20 +105,6 @@ target_compile_features(program_seq_O2 PRIVATE c_std_11)
 target_compile_features(program_seq_O3 PRIVATE c_std_11)
 target_compile_features(lib PRIVATE c_std_11)
 
-#target_compile_definitions(program_O3_V1 PRIVATE -DVERSION=1) #da eliminare
-
-# ---------------------------------------- TEST -----------------------------------------
-add_executable(countingSort_test test/test.c src/utils.c)
-target_include_directories(countingSort_test PRIVATE include)
-
-add_test(NAME countingSort_test
-	COMMAND countingSort_test )
-add_custom_target(
-	 execute_test
-	 COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/build/countingSort_test COMMENT "Executing test..."
-    DEPENDS
-		countingSort_test
-)
 # ------------------------------------ DOCUMENTATION ------------------------------------
 find_package(Doxygen
              REQUIRED dot)
